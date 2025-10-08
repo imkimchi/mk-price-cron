@@ -1,0 +1,23 @@
+{
+  "name": "customer-price-history-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Standalone worker to record daily customer product pricing outside the Vercel deployment.",
+  "main": "customer-price-history-worker.js",
+  "scripts": {
+    "start": "node customer-price-history-worker.js",
+    "start:schedule": "node customer-price-history-worker.js",
+    "start:once": "node customer-price-history-worker.js once",
+    "run:manual": "node run-manual.js",
+    "dev": "nodemon customer-price-history-worker.js"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "dotenv": "^16.4.5",
+    "mongoose": "^8.6.3",
+    "node-cron": "^3.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
